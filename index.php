@@ -5,9 +5,9 @@ if (isset($_POST['name'])) {
     $server = "localhost";
     $username = "root";
     $password = "";
-    $databas=  "";
+   
 
-    $con = mysqli_connect($server, $username, $password,$database);
+    $con = mysqli_connect($server, $username, $password);
     if (!$con) {
         die("connection to this database failed due to " . mysqli_connect_error());
     }
@@ -51,21 +51,21 @@ if (isset($_POST['name'])) {
         ?>
     </center>
     <form action="index.php" method="post">
-        <div class="mb-1">
-            <label class="form-label">Name</label>
+          <div class="mb-1">
+            <label for="name" class="form-label">Name</label>
             <input type="name" name="name" class="form-control" id="name">
         </div>
         <div class="mb-1">
-            <label class="form-label">Age</label>
-            <input type="text" name="age" class="form-control">
+            <label for="age" class="form-label">Age</label>
+            <input type="text" name="age" id="age" class="form-control">
         </div>
         <div class="mb-1">
-            <label class="form-label">gender</label>
-            <input type="gender" name="gender" class="form-control">
+            <label for="gender" class="form-label">gender</label>
+            <input type="gender" name="gender" id="gender" class="form-control">
         </div>
         <div class="mb-1">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
         </div>
         <button type="submit" class="btn btn-success ">Submit</button>
     </form>
